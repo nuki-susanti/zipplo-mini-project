@@ -75,7 +75,7 @@ CREATE TABLE RentalTransaction (
     return_location_id INT NOT NULL,
     end_time DATETIME2(7) NULL,
     amount DECIMAL(10,2) NULL,
-    km DECIMAL(10,2) NULL
+    km DECIMAL(10,3) NULL
 
     CONSTRAINT pk_rental_transaction PRIMARY KEY (transaction_id),
     CONSTRAINT fk_rental_transaction_unit FOREIGN KEY (equipment_unit_id) REFERENCES EquipmentUnit(equipment_unit_id),
