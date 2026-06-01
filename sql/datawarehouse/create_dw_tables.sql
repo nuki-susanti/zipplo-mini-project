@@ -1,68 +1,75 @@
 -- ===================================================================
--- 1. Dimension tables (Dim)
+-- 1. Dimensions table
 -- ===================================================================
 
-CREATE TABLE DimDate (
-    Date_ID INT PRIMARY KEY,
-    [Date]  datetime2(7),
-    [Day] INT,
-    [Month] INT,
-    [Quarter] INT,
-    [Year] INT
+CREATE TABLE dim_date (
+    date_id INT PRIMARY KEY,
+    [date] DATETIME2(7),
+    [day] INT,
+    [month] INT,
+    [quarter] INT,
+    [year] INT
 );
 
-CREATE TABLE DimEquipment (
-    EquipmentUnit_ID INT PRIMARY KEY,
-    Category VARCHAR(50),
-    Subcategory VARCHAR(50),
-    Model VARCHAR(50),
-    SerialNumber VARCHAR(50),
-    PricePerMinute DECIMAL(10, 2),
-    PurchaseDate DATE,
-    LastMaintenance DATE,
-    Condition VARCHAR(50),
-    EquipmentUnitAltKey int,
-    EquipmentAltKey int
+CREATE TABLE dim_equipment (
+    equipment_unit_id INT PRIMARY KEY,
+    category VARCHAR(50),
+    subcategory VARCHAR(50),
+    model VARCHAR(50),
+    serial_number VARCHAR(50),
+    price_per_minute DECIMAL(10, 2),
+    purchase_date DATE,
+    last_maintenance DATE,
+    condition VARCHAR(50),
+    equipment_unit_alt_key INT,
+    equipment_alt_key INT
 );
 
-CREATE TABLE DimLocation (
-    Location_ID INT PRIMARY KEY,
-    LocationType VARCHAR(50),
-    LocationName NVARCHAR(100),
-    Address NVARCHAR(100),
-    City NVARCHAR(100),
-    Country VARCHAR(50),
-    PlaceAltKey int
+CREATE TABLE dim_location (
+    location_id INT PRIMARY KEY,
+    location_type VARCHAR(50),
+    location_name NVARCHAR(100),
+    address NVARCHAR(100),
+    city NVARCHAR(100),
+    country VARCHAR(50),
+    place_alt_key INT
 );
 
-CREATE TABLE DimCustomer (
-    Customer_ID INT PRIMARY KEY,
-    CustomerName NVARCHAR(100),
-    [Type] NVARCHAR(100), 
-    Company NVARCHAR(100)
+CREATE TABLE dim_customer (
+    customer_id INT PRIMARY KEY,
+    customer_name NVARCHAR(100),
+    [type] NVARCHAR(100), 
+    company NVARCHAR(100)
 );
 
 -- ===================================================================
--- 2. Fact Tables with Foreign Keys
+-- 2. Fact table
 -- ===================================================================
 
-CREATE TABLE FactRental (
-    Rental_ID INT PRIMARY KEY,
-    Amount DECIMAL(10, 2),
-    StartTime int, 
-    EndTime int, 
-    Customer_ID INT, 
-    EquipmentUnit_ID INT, 
-    PickUpLocation INT, 
-    ReturnLocation INT, 
-    Duration datetime2(7),
-    [Count] int default 1
+CREATE TABLE fact_rental (
+    rental_id INT PRIMARY KEY,
+    amount DECIMAL(10, 2),
+    start_time INT, 
+    end_time INT, 
+    customer_id INT, 
+    equipment_unit_id INT, 
+    pick_up_location INT, 
+    return_location INT, 
+    duration DATETIME2(7),
+    [count] INT DEFAULT 1,
+    km DECIMAL(10, 3)
 
-    -- Definition of constraints
-    CONSTRAINT FK_FactRental_StartTime FOREIGN KEY (StartTime) REFERENCES DimDate(Date_ID),
-    CONSTRAINT FK_FactRental_EndTime FOREIGN KEY (EndTime) REFERENCES DimDate(Date_ID),
-    CONSTRAINT FK_FactRental_Customer FOREIGN KEY (Customer_ID) REFERENCES DimCustomer(Customer_ID),
-    CONSTRAINT FK_FactRental_Equipment FOREIGN KEY (EquipmentUnit_ID) REFERENCES DimEquipment(EquipmentUnit_ID),
-    CONSTRAINT FK_FactRental_PickUpLocation FOREIGN KEY (PickUpLocation) REFERENCES DimLocation(Location_ID),
-    CONSTRAINT FK_FactRental_ReturnLocation FOREIGN KEY (ReturnLocation) REFERENCES DimLocation(Location_ID)
+    -- Definition of Constraints
+    CONSTRAINT fk_fact_rental_start_time FOREIGN KEY (start_time) 
+        REFERENCES dim_date(date_id),
+    CONSTRAINT fk_fact_rental_end_time FOREIGN KEY (end_time) 
+        REFERENCES dim_date(date_id),
+    CONSTRAINT fk_fact_rental_customer FOREIGN KEY (customer_id) 
+        REFERENCES dim_customer(customer_id),
+    CONSTRAINT fk_fact_rental_equipment FOREIGN KEY (equipment_unit_id) 
+        REFERENCES dim_equipment(equipment_unit_id),
+    CONSTRAINT fk_fact_rental_pick_up_location FOREIGN KEY (pick_up_location) 
+        REFERENCES dim_location(location_id),
+    CONSTRAINT fk_fact_rental_return_location FOREIGN KEY (return_location) 
+        REFERENCES dim_location(location_id)
 );
