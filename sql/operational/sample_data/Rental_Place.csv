@@ -1,0 +1,7 @@
+﻿place_id,type,name,address,city,country,employee_id
+1,store,Gothenburg Central Store,Drottningtorget 5,Gothenburg,Sweden,1
+2,station,Gothenburg Central Station,Nils Ericsonplatsen 2,Gothenburg,Sweden,
+3,store,Stockholm City Store,Vasagatan 12,Stockholm,Sweden,2
+4,station,Stockholm Odenplan Station,Odenplan 3,Stockholm,Sweden,
+5,store,Copenhagen Central Store,Bernstorffsgade 14,Copenhagen,Denmark,3
+6,station,Copenhagen Norrebro Station,Norrebrograde 88,Copenhagen,Denmark,
