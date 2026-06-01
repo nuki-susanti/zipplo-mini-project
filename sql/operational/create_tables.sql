@@ -57,14 +57,12 @@ CREATE TABLE EquipmentUnit (
     serial_number VARCHAR(50) NOT NULL,
     purchase_date DATE NOT NULL,
     last_maintenance DATE NULL,
-    condition VARCHAR(50) NOT NULL DEFAULT 'good',
-    current_place_id INT NULL
+    condition VARCHAR(50) NOT NULL DEFAULT 'good'
 
     CONSTRAINT pk_equipment_unit PRIMARY KEY (equipment_unit_id),
     CONSTRAINT uq_equipment_unit_serial_number UNIQUE(serial_number),
     CONSTRAINT chk_equipment_unit_condition CHECK(condition IN ('good', 'fair', 'poor')),
-    CONSTRAINT fk_equipment_unit_equipment FOREIGN KEY (equipment_id) REFERENCES Equipment(equipment_id),
-    CONSTRAINT fk_equipment_unit_rental_place FOREIGN KEY (current_place_id) REFERENCES RentalPlace(place_id)
+    CONSTRAINT fk_equipment_unit_equipment FOREIGN KEY (equipment_id) REFERENCES Equipment(equipment_id)
 );
 
 DROP TABLE IF EXISTS RentalTransaction;
@@ -73,8 +71,8 @@ CREATE TABLE RentalTransaction (
     equipment_unit_id INT NOT NULL,
     customer_id INT NOT NULL,
     pickup_location_id INT NOT NULL,
-    return_location_id INT NOT NULL,
     start_time DATETIME2(7) NOT NULL,
+    return_location_id INT NOT NULL,
     end_time DATETIME2(7) NULL,
     amount DECIMAL(10,2) NULL,
     km DECIMAL(10,2) NULL
