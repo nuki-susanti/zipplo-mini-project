@@ -1,10 +1,11 @@
 -- ===================================================================
 -- 1. Dimensions table
 -- ===================================================================
+CREATE DATABASE ZipploDW
 
 CREATE TABLE dim_date (
     date_id INT PRIMARY KEY,
-    [date] DATETIME2(7),
+    [date] DATE,
     [day] INT,
     [month] INT,
     [quarter] INT,
@@ -39,7 +40,8 @@ CREATE TABLE dim_customer (
     customer_id INT PRIMARY KEY,
     customer_name NVARCHAR(100),
     [type] NVARCHAR(100), 
-    company NVARCHAR(100)
+    company NVARCHAR(100),
+    customer_alt_key INT
 );
 
 -- ===================================================================
@@ -47,17 +49,19 @@ CREATE TABLE dim_customer (
 -- ===================================================================
 
 CREATE TABLE fact_rental (
-    rental_id INT PRIMARY KEY,
+    transaction_id INT PRIMARY KEY,
     amount DECIMAL(10, 2),
-    start_time INT, 
-    end_time INT, 
+    start_date_id INT, 
+    end_date_id INT, 
     customer_id INT, 
     equipment_unit_id INT, 
     pick_up_location INT, 
     return_location INT, 
     duration DATETIME2(7),
     [count] INT DEFAULT 1,
-    km DECIMAL(10, 3)
+    km DECIMAL(10, 3),
+    start_time time,
+    end_time time
 
     -- Definition of Constraints
     CONSTRAINT fk_fact_rental_start_time FOREIGN KEY (start_time) 
