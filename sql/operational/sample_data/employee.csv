@@ -1,7 +1,4 @@
-employee_id,name,position
-1,Mikael Virtanen,Store Manager
-2,Sofia Lindqvist,Station Supervisor
-3,Antti Korhonen,Store Manager
-4,Laura Mäkinen,Station Supervisor
-5,James Okafor,Store Manager
-6,Amara Diallo,Station Supervisor
+﻿employee_id,name,position
+1,Erik Andersson,Rental Assistant
+2,Johan Berg,Store Manager
+3,Mette Jensen,Rental Assistant

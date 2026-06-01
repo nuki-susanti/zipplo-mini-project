@@ -1,16 +1,7 @@
-customer_id,name,type,company,business_id
-1,Emma Saarinen,private,,
-2,Pekka Nieminen,private,,
-3,Aino Hakkarainen,private,,
-4,Ville Lehtonen,private,,
-5,Nora Björk,private,,
-6,Erik Holm,private,,
-7,Lena Svensson,private,,
-8,Klaus Bauer,private,,
-9,Mia Fischer,private,,
-10,Tom Weber,private,,
-11,Acme Logistics Oy,corporate,Acme Logistics Oy,FI12345678
-12,Nordic Rides AB,corporate,Nordic Rides AB,SE556789123
-13,Berlin Courier GmbH,corporate,Berlin Courier GmbH,DE987654321
-14,FastMove Oy,corporate,FastMove Oy,FI87654321
-15,UrbanFleet AB,corporate,UrbanFleet AB,SE112233445
+﻿customer_id,name,type,company,business_id
+1,Anna Svensson,private,,
+2,Omar Hassan,private,,
+3,Linnea Karlsson,private,,
+4,Nordic Courier ApS,corporate,Nordic Courier ApS,DK45872109
+5,Green Logistics AB,corporate,Green Logistics AB,SE5598123456
+6,Emil Larsson,private,,

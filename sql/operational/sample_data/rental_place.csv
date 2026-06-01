@@ -1,11 +1,7 @@
-place_id,type,name,address,city,country,employee_id
-1,store,Helsinki Central Store,Mannerheimintie 5,Helsinki,Finland,1
-2,station,Helsinki Railway Station Dock,Rautatientori 1,Helsinki,Finland,2
-3,station,Helsinki Market Square Dock,Kauppatori 3,Helsinki,Finland,2
-4,station,Helsinki Kallio Dock,Fleminginkatu 12,Helsinki,Finland,2
-5,store,Stockholm City Store,Drottninggatan 10,Stockholm,Sweden,3
-6,station,Stockholm Central Dock,Centralplan 1,Stockholm,Sweden,4
-7,station,Stockholm Gamla Stan Dock,Stortorget 4,Stockholm,Sweden,4
-8,store,Berlin Mitte Store,Alexanderplatz 2,Berlin,Germany,5
-9,station,Berlin Alexanderplatz Dock,Alexanderplatz 1,Berlin,Germany,6
-10,station,Berlin Tiergarten Dock,Strasse des 17 Juni 1,Berlin,Germany,6
+﻿place_id,type,name,address,city,country,employee_id
+1,store,Gothenburg Central Store,Drottningtorget 5,Gothenburg,Sweden,1
+2,station,Gothenburg Central Station,Nils Ericsonplatsen 2,Gothenburg,Sweden,
+3,store,Stockholm City Store,Vasagatan 12,Stockholm,Sweden,2
+4,station,Stockholm Odenplan Station,Odenplan 3,Stockholm,Sweden,
+5,store,Copenhagen Central Store,Bernstorffsgade 14,Copenhagen,Denmark,3
+6,station,Copenhagen Norrebro Station,Norrebrograde 88,Copenhagen,Denmark,
