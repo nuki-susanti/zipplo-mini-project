@@ -2,6 +2,7 @@
 -- CREATE TABLE
 ------------------------------------------------------
 CREATE DATABASE ZipploDB
+USE ZipploDB
 
 DROP TABLE IF EXISTS Employee;
 CREATE TABLE Employee (

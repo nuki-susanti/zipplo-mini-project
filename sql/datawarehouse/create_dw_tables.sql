@@ -2,6 +2,7 @@
 -- 1. Dimensions table
 -- ===================================================================
 CREATE DATABASE ZipploDW
+USE ZipploDW
 
 CREATE TABLE dim_date (
     date_id INT PRIMARY KEY,
