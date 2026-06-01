@@ -1,0 +1,9 @@
+equipment_id,category,subcategory,model,price_per_minute
+1,E-Bike,City,Bafang E500,0.15
+2,E-Bike,City,Bafang E300,0.12
+3,E-Bike,Mountain,Bosch eMTB Pro,0.18
+4,Scooter,Standard,Xiaomi Pro 2,0.10
+5,Scooter,Standard,Segway E45,0.11
+6,Scooter,Premium,Xiaomi Ultra,0.14
+7,Kickboard,Standard,Razor E300,0.08
+8,Kickboard,Premium,Boosted Rev,0.13
