@@ -91,8 +91,12 @@ Location
 - Which city has the highest rental volume?
 
 Customer
-- What is the revenue split between individual and corporate customers?
-- Which customers have the highest total rental spend?
+1. What is the revenue split between individual and corporate customers?
+2. Which customers have the highest total rental spend?
+3. What is the average rental amount for individual customers compared to corporate customers?
+4. What is the average rental duration for individual customers compared to corporate customers?
+5. Which equipment categories are rented most frequently by individual customers compared to corporate customers?
+6. How has revenue from individual and corporate customers developed over time?
 
 Time
 - Are there peak hours, days, or seasons for rentals?
