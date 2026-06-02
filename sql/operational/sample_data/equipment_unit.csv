@@ -1,9 +1,0 @@
-﻿equipment_unit_id,equipment_id,serial_number,purchase_date,last_maintenance,condition
-1,1,VR-C200-SE-001,2025-03-15,2026-04-20,good
-2,1,VR-C200-SE-002,2025-04-10,2026-04-25,good
-3,3,SS-S10-SE-001,2025-06-01,2026-04-30,good
-4,3,SS-S10-SE-002,2025-06-15,2026-05-03,good
-5,4,UK-K5-SE-001,2025-08-01,2026-04-15,good
-6,2,CV-C1-DK-001,2025-02-05,2026-04-22,good
-7,1,VR-C200-DK-001,2025-05-12,2026-05-02,fair
-8,4,UK-K5-DK-001,2025-07-20,2026-03-30,poor
