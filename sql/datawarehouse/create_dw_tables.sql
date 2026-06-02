@@ -17,7 +17,7 @@ CREATE TABLE dim_date (
 );
 
 CREATE TABLE dim_equipment (
-    equipment_unit_id INT PRIMARY KEY,
+    equipment_unit_id INT IDENTITY(1, 1) PRIMARY KEY,
     category VARCHAR(50),
     subcategory VARCHAR(50),
     model VARCHAR(50),
@@ -31,7 +31,7 @@ CREATE TABLE dim_equipment (
 );
 
 CREATE TABLE dim_location (
-    location_id INT PRIMARY KEY,
+    location_id INT IDENTITY(1, 1) PRIMARY KEY,
     location_type VARCHAR(50),
     location_name NVARCHAR(100),
     address NVARCHAR(100),
@@ -41,7 +41,7 @@ CREATE TABLE dim_location (
 );
 
 CREATE TABLE dim_customer (
-    customer_id INT PRIMARY KEY,
+    customer_id INT IDENTITY(1, 1) PRIMARY KEY,
     customer_name NVARCHAR(100),
     [type] NVARCHAR(100), 
     company NVARCHAR(100),
