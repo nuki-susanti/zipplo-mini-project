@@ -1,5 +1,4 @@
 INSERT INTO ZipploDW.dbo.dim_location (
-    location_id,
     location_type,
     location_name,
     address,
@@ -8,7 +7,6 @@ INSERT INTO ZipploDW.dbo.dim_location (
     place_alt_key
 )
 SELECT
-    rp.place_id,
     rp.type,
     rp.name,
     rp.address,
