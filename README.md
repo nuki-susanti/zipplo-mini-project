@@ -105,7 +105,7 @@ A separate data warehouse is maintained for analytics and Power BI reporting, lo
 ## Repository Structure
 
 ```
-rental-project/
+zipplo-mini-project/
 │
 ├── docs/
 │   ├── operational_model_erd.png       # ERD screenshot of the OLTP database
