@@ -9,6 +9,12 @@ GO
 USE ZipploDW
 GO
 
+DROP TABLE IF EXISTS fact_rental;
+DROP TABLE IF EXISTS dim_customer;
+DROP TABLE IF EXISTS dim_location;
+DROP TABLE IF EXISTS dim_equipment;
+DROP TABLE IF EXISTS dim_date;
+
 CREATE TABLE dim_date (
     date_id INT PRIMARY KEY,
     [date] DATE,
