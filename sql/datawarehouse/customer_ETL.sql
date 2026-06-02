@@ -1,3 +1,6 @@
+USE ZipploDW;
+GO
+
 INSERT INTO ZipploDW.dbo.dim_customer (
     customer_name,
     [type],
