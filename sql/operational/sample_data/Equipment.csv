@@ -1,5 +1,15 @@
 ﻿equipment_id,category,subcategory,model,price_per_minute
-1,Electric Bicycle,City E-Bike,VoltRide City 200,1.50
-2,Electric Bicycle,Cargo E-Bike,CargoVolt C1,2.50
-3,Electric Scooter,Standard Scooter,Swift Scooter S10,1.20
-4,Electric Kickboard,Standard Kickboard,UrbanKick K5,0.95
+1,Electric Bicycle,City E-Bike,UrbanGlide City 250,0.16
+2,Electric Bicycle,City E-Bike,NordRide Metro 300,0.18
+3,Electric Bicycle,Cargo E-Bike,CargoMove Family 500,0.27
+4,Electric Bicycle,Folding E-Bike,FoldGo Compact 250,0.20
+5,Electric Scooter,Urban Scooter,SwiftScoot S2,0.14
+6,Electric Scooter,Urban Scooter,MoveX City S4,0.15
+7,Electric Scooter,Long Range Scooter,RouteScoot Pro,0.21
+8,Electric Scooter,Seated Scooter,MetroSeat E1,0.23
+9,Electric Kickboard,Standard Kickboard,ZipBoard Lite,0.11
+10,Electric Kickboard,Standard Kickboard,CityKick K2,0.12
+11,Electric Kickboard,Long Range Kickboard,ZipBoard Pro,0.17
+12,Electric Kickboard,Commuter Kickboard,VoltStep Commuter,0.15
+13,Electric Moped,Urban Moped,VoltGo M45,0.34
+14,Electric Moped,Delivery Moped,CargoVolt D1,0.39

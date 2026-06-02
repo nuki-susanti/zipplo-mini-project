@@ -1,7 +1,49 @@
 ﻿place_id,type,name,address,city,country,employee_id
-1,store,Gothenburg Central Store,Drottningtorget 5,Gothenburg,Sweden,1
-2,station,Gothenburg Central Station,Nils Ericsonplatsen 2,Gothenburg,Sweden,
-3,store,Stockholm City Store,Vasagatan 12,Stockholm,Sweden,2
-4,station,Stockholm Odenplan Station,Odenplan 3,Stockholm,Sweden,
-5,store,Copenhagen Central Store,Bernstorffsgade 14,Copenhagen,Denmark,3
-6,station,Copenhagen Norrebro Station,Norrebrograde 88,Copenhagen,Denmark,
+1,store,Stockholm Central Store,Vasagatan 18,Stockholm,Sweden,1
+2,station,Stockholm Central Station Hub,Centralplan 15,Stockholm,Sweden,
+3,station,Stockholm Sodermalm Station,Gotgatan 74,Stockholm,Sweden,
+4,station,Stockholm Ostermalm Station,Sturegatan 12,Stockholm,Sweden,
+5,store,Gothenburg City Store,Kungsportsavenyen 22,Gothenburg,Sweden,2
+6,station,Gothenburg Central Station Hub,Drottningtorget 5,Gothenburg,Sweden,
+7,station,Gothenburg Lindholmen Station,Lindholmspiren 3,Gothenburg,Sweden,
+8,station,Gothenburg Haga Station,Haga Nygata 21,Gothenburg,Sweden,
+9,store,Malmo City Store,Sodra Forstadsgatan 35,Malmo,Sweden,3
+10,station,Malmo Central Station Hub,Skeppsbron 1,Malmo,Sweden,
+11,station,Malmo Hyllie Station,Arenagatan 8,Malmo,Sweden,
+12,station,Malmo Vastra Hamnen Station,Stora Varvsgatan 10,Malmo,Sweden,
+13,store,Uppsala City Store,Kungsgatan 31,Uppsala,Sweden,4
+14,station,Uppsala Central Station Hub,Stationsgatan 1,Uppsala,Sweden,
+15,station,Uppsala University Station,Dag Hammarskjolds vag 7,Uppsala,Sweden,
+16,station,Uppsala Gränby Station,Marknadsgatan 1,Uppsala,Sweden,
+17,store,Helsinki Central Store,Mannerheimintie 24,Helsinki,Finland,5
+18,station,Helsinki Central Railway Station Hub,Kaivokatu 1,Helsinki,Finland,
+19,station,Helsinki Kamppi Station,Urho Kekkosen katu 1,Helsinki,Finland,
+20,station,Helsinki Pasila Station,Ratapihantie 6,Helsinki,Finland,
+21,store,Tampere City Store,Hameenkatu 18,Tampere,Finland,6
+22,station,Tampere Railway Station Hub,Rautatienkatu 25,Tampere,Finland,
+23,station,Tampere University Station,Kalevantie 4,Tampere,Finland,
+24,station,Tampere Ratina Station,Vuolteenkatu 1,Tampere,Finland,
+25,store,Turku City Store,Yliopistonkatu 20,Turku,Finland,7
+26,station,Turku Market Square Station,Kauppiaskatu 9,Turku,Finland,
+27,station,Turku Harbour Station,Linnankatu 91,Turku,Finland,
+28,station,Turku University Station,Henrikinkatu 2,Turku,Finland,
+29,store,Espoo City Store,Leppavaarankatu 3,Espoo,Finland,8
+30,station,Espoo Tapiola Station,Lansituulentie 5,Espoo,Finland,
+31,station,Espoo Otaniemi Station,Otaniementie 12,Espoo,Finland,
+32,station,Espoo Matinkyla Station,Piispansilta 11,Espoo,Finland,
+33,store,Berlin Central Store,Friedrichstrasse 98,Berlin,Germany,9
+34,station,Berlin Alexanderplatz Station,Alexanderplatz 3,Berlin,Germany,
+35,station,Berlin Hauptbahnhof Station,Europaplatz 1,Berlin,Germany,
+36,station,Berlin Potsdamer Platz Station,Potsdamer Platz 2,Berlin,Germany,
+37,store,Hamburg City Store,Monckebergstrasse 14,Hamburg,Germany,10
+38,station,Hamburg Central Station Hub,Hachmannplatz 16,Hamburg,Germany,
+39,station,Hamburg HafenCity Station,Uberseeallee 5,Hamburg,Germany,
+40,station,Hamburg Altona Station,Paul-Nevermann-Platz 1,Hamburg,Germany,
+41,store,Munich Central Store,Sonnenstrasse 16,Munich,Germany,11
+42,station,Munich Central Station Hub,Bayerstrasse 10,Munich,Germany,
+43,station,Munich Marienplatz Station,Marienplatz 8,Munich,Germany,
+44,station,Munich University Station,Leopoldstrasse 18,Munich,Germany,
+45,store,Cologne City Store,Schildergasse 38,Cologne,Germany,12
+46,station,Cologne Central Station Hub,Trankgasse 11,Cologne,Germany,
+47,station,Cologne Deutz Station,Ottoplatz 7,Cologne,Germany,
+48,station,Cologne Rudolfplatz Station,Rudolfplatz 3,Cologne,Germany,
