@@ -13,7 +13,6 @@ SELECT
     c.company AS company,
     c.customer_id AS customer_alt_key
 FROM ZipploDB.dbo.Customer AS c
--- alt
 WHERE NOT EXISTS (
     SELECT 1
     FROM ZipploDW.dbo.dim_customer AS dc
