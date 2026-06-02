@@ -1,3 +1,6 @@
+USE ZipploDW;
+GO
+
 INSERT INTO ZipploDW.dbo.dim_location (
     location_type,
     location_name,
