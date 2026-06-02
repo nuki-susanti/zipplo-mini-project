@@ -30,6 +30,7 @@ SELECT
     
     -- duration calculation
     DATEDIFF(MINUTE, rt.start_time, rt.end_time) AS duration,
+    1 AS [count],
     rt.km,
     CAST(rt.start_time AS TIME) AS start_time,
     CAST(rt.end_time AS TIME) AS end_time
