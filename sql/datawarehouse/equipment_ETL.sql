@@ -26,7 +26,7 @@ SELECT
 	e.equipment_id AS equipment_id
 FROM ZipploDB.dbo.EquipmentUnit AS eu
 JOIN ZipploDB.dbo.Equipment AS e
-	ON eu.equipment_id = e.equipment_id;
+	ON eu.equipment_id = e.equipment_id
 WHERE NOT EXISTS (
     SELECT 1
     FROM ZipploDW.dbo.dim_equipment AS de
