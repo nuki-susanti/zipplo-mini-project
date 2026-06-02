@@ -29,7 +29,8 @@ SELECT
     dl_ret.location_id,   -- Surrogat Key from dim_location (Rückgabe)
     
     -- duration calculation
-    CAST(rt.end_time - rt.start_time AS DATETIME2(7)) AS duration,
+    --CAST(rt.end_time - rt.start_time AS DATETIME2(7)) AS duration,
+    DATEADD(SECOND, DATEDIFF(SECOND, rt.start_time, rt.end_time), CAST('1900-01-01' AS DATETIME2(7))) AS duration,
     1 AS [count],
     rt.km,
     CAST(rt.start_time AS TIME) AS start_time,
