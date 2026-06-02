@@ -2,6 +2,14 @@
 -- SETUP SCRIPT FOR STAGING TABLES
 ------------------------------------------------------
 
+DROP TABLE IF EXISTS stg_Employee;
+DROP TABLE IF EXISTS stg_Customer;
+DROP TABLE IF EXISTS stg_Equipment;
+DROP TABLE IF EXISTS stg_RentalPlace;
+DROP TABLE IF EXISTS stg_EquipmentUnit;
+DROP TABLE IF EXISTS stg_EquipmentUnit;
+DROP TABLE IF EXISTS stg_RentalTransaction;
+
 
 CREATE TABLE stg_Employee (
     employee_id INT,

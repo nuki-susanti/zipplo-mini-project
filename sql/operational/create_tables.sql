@@ -1,10 +1,18 @@
 ------------------------------------------------------
 -- CREATE TABLE
 ------------------------------------------------------
-CREATE DATABASE ZipploDB
-USE ZipploDB
+IF DB_ID('ZipploDB') IS NULL
+    CREATE DATABASE ZipploDB;
 
+USE ZipploDB;
+
+DROP TABLE IF EXISTS RentalTransaction;
+DROP TABLE IF EXISTS EquipmentUnit;
+DROP TABLE IF EXISTS Equipment;
+DROP TABLE IF EXISTS Customer;
+DROP TABLE IF EXISTS RentalPlace;
 DROP TABLE IF EXISTS Employee;
+
 CREATE TABLE Employee (
     employee_id INT NOT NULL IDENTITY(1,1),
     name NVARCHAR(100) NOT NULL,
@@ -13,7 +21,6 @@ CREATE TABLE Employee (
     CONSTRAINT pk_employee PRIMARY KEY (employee_id)
 )
 
-DROP TABLE IF EXISTS RentalPlace;
 CREATE TABLE RentalPlace (
     place_id INT IDENTITY(1,1),
     type VARCHAR(50) NOT NULL,
@@ -25,10 +32,9 @@ CREATE TABLE RentalPlace (
     
     CONSTRAINT pk_rentalplace PRIMARY KEY (place_id),
     CONSTRAINT chk_rentalplace CHECK(type IN ('store', 'station')),
-    CONSTRAINT fk_rentalplace_employee FOREIGN KEY(employee_id) REFERENCES Employee(employee_id)
 );
 
-DROP TABLE IF EXISTS Customer;
+
 CREATE TABLE Customer (
     customer_id INT NOT NULL IDENTITY(1,1),
     name NVARCHAR(100) NOT NULL,
@@ -41,7 +47,7 @@ CREATE TABLE Customer (
 );
 
 
-DROP TABLE IF EXISTS Equipment;
+
 CREATE TABLE Equipment (
     equipment_id INT NOT NULL IDENTITY(1,1),
     category VARCHAR(50) NOT NULL,
@@ -52,7 +58,7 @@ CREATE TABLE Equipment (
     CONSTRAINT pk_equipment PRIMARY KEY (equipment_id)
 );
 
-DROP TABLE IF EXISTS EquipmentUnit;
+
 CREATE TABLE EquipmentUnit (
     equipment_unit_id INT NOT NULL IDENTITY(1,1),
     equipment_id INT NOT NULL,
@@ -63,11 +69,10 @@ CREATE TABLE EquipmentUnit (
 
     CONSTRAINT pk_equipment_unit PRIMARY KEY (equipment_unit_id),
     CONSTRAINT uq_equipment_unit_serial_number UNIQUE(serial_number),
-    CONSTRAINT chk_equipment_unit_condition CHECK(condition IN ('good', 'fair', 'poor')),
-    CONSTRAINT fk_equipment_unit_equipment FOREIGN KEY (equipment_id) REFERENCES Equipment(equipment_id)
+    CONSTRAINT chk_equipment_unit_condition CHECK(condition IN ('good', 'fair', 'poor'))
 );
 
-DROP TABLE IF EXISTS RentalTransaction;
+
 CREATE TABLE RentalTransaction (
     transaction_id INT NOT NULL IDENTITY(1,1),
     equipment_unit_id INT NOT NULL,
@@ -79,9 +84,24 @@ CREATE TABLE RentalTransaction (
     amount DECIMAL(10,2) NULL,
     km DECIMAL(10,3) NULL
 
-    CONSTRAINT pk_rental_transaction PRIMARY KEY (transaction_id),
-    CONSTRAINT fk_rental_transaction_unit FOREIGN KEY (equipment_unit_id) REFERENCES EquipmentUnit(equipment_unit_id),
-    CONSTRAINT fk_rental_transaction_customer FOREIGN KEY (customer_id) REFERENCES Customer(customer_id),
-    CONSTRAINT fk_rental_transaction_pickup FOREIGN KEY (pickup_location_id) REFERENCES RentalPlace(place_id),
-    CONSTRAINT fk_rental_transaction_return FOREIGN KEY (return_location_id) REFERENCES RentalPlace(place_id),
-);
+    CONSTRAINT pk_rental_transaction PRIMARY KEY (transaction_id)
+)
+
+------------------------------------------------------
+-- ADD FOREIGN KEY CONSTRAINTS
+------------------------------------------------------
+
+ALTER TABLE RentalPlace 
+    ADD CONSTRAINT fk_rentalplace_employee FOREIGN KEY(employee_id) REFERENCES Employee(employee_id)
+
+ALTER TABLE EquipmentUnit
+    ADD CONSTRAINT fk_equipment_unit_equipment FOREIGN KEY (equipment_id) REFERENCES Equipment(equipment_id)
+
+ALTER TABLE RentalTransaction
+    ADD CONSTRAINT fk_rental_transaction_unit FOREIGN KEY (equipment_unit_id) REFERENCES EquipmentUnit(equipment_unit_id)
+ALTER TABLE RentalTransaction
+    ADD CONSTRAINT fk_rental_transaction_customer FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
+ALTER TABLE RentalTransaction
+    ADD CONSTRAINT fk_rental_transaction_pickup FOREIGN KEY (pickup_location_id) REFERENCES RentalPlace(place_id)
+ALTER TABLE RentalTransaction
+    ADD CONSTRAINT fk_rental_transaction_return FOREIGN KEY (return_location_id) REFERENCES RentalPlace(place_id)
