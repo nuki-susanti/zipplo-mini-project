@@ -72,9 +72,18 @@ Revenue & Volume
 - What is the average rental amount per transaction?
 
 Equipment
-- Which equipment category (bicycle, scooter, kickboard) generates the most revenue?
-- Which individual equipment units are rented most frequently?
-- What is the average rental duration by equipment category?
+1. Which equipment category generates the most total revenue?
+Electric Bicycle vs. Electric Scooter vs. Electric Kickboard vs. Electric Moped — comparing total revenue across categories.
+2. Which subcategory has the highest average revenue per rental?
+Comparing all subcategories across categories — revenue per individual rental.
+3. What is the average rental duration by category and subcategory?
+How long are different categories and subcategories rented on average — reveals usage patterns.
+4. How does rental volume compare across categories and subcategories?
+Number of rentals per category and subcategory — demand comparison.
+5. What are the top 5 most revenue-generating equipment models?
+Model-level revenue ranking — the only model-level question.
+6. How has rental volume by category developed over time?
+Monthly trend by category — identifying growth or seasonal variation.
 
 Location
 - Which rental places (stores vs. stations) generate the most rentals?
