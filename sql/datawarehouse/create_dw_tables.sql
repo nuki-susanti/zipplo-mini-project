@@ -68,7 +68,7 @@ CREATE TABLE fact_rental (
     equipment_unit_id INT, 
     pick_up_location INT, 
     return_location INT, 
-    duration DATETIME2(7),
+    duration INT,
     [count] INT DEFAULT 1,
     km DECIMAL(10, 3),
     start_time time,
