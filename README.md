@@ -6,24 +6,30 @@ A data engineering project covering the full pipeline from operational database 
 
 ## Table of Contents
 
-1. [Project Overview](#1-project-overview)
-   - [Project Context](#project-context)
-   - [Business Scenario](#business-scenario)
-2. [Repository Structure](#2-repository-structure)
-3. [Operational Database (ZipploDB)](#3-operational-database-zipplodb)
-4. [Data Warehouse (ZipploDW)](#4-data-warehouse-zipplodw)
-   - [Star Schema](#star-schema)
-   - [Dimension Tables](#dimension-tables)
-   - [Fact Table](#fact-table)
-5. [ETL Process](#5-etl-process)
-6. [Source Data Summary](#6-source-data-summary)
-7. [Power BI Reports & Business Questions](#7-power-bi-reports--business-questions)
-   - [Revenue & Volume](#revenue--volume)
-   - [Equipment](#equipment)
-   - [Location](#location)
-   - [Customer](#customer)
-   - [Time](#time)
-8. [Prerequisites & How to Run](#8-prerequisites--how-to-run)
+- [Zipplo — Rental Operations Database \& Data Warehouse](#zipplo--rental-operations-database--data-warehouse)
+  - [Table of Contents](#table-of-contents)
+  - [1. Project Overview](#1-project-overview)
+    - [Project Context](#project-context)
+    - [Business Scenario](#business-scenario)
+  - [2. Repository Structure](#2-repository-structure)
+  - [3. Operational Database (ZipploDB)](#3-operational-database-zipplodb)
+    - [Key modeling decisions](#key-modeling-decisions)
+  - [4. Data Warehouse (ZipploDW)](#4-data-warehouse-zipplodw)
+    - [Fact table grain](#fact-table-grain)
+    - [Star Schema](#star-schema)
+    - [Dimension Tables](#dimension-tables)
+    - [Fact Table](#fact-table)
+  - [5. ETL Process](#5-etl-process)
+    - [Surrogate key resolution in the fact load](#surrogate-key-resolution-in-the-fact-load)
+  - [6. Source Data Summary](#6-source-data-summary)
+  - [7. Power BI Reports \& Business Questions](#7-power-bi-reports--business-questions)
+    - [Revenue \& Volume](#revenue--volume)
+    - [Location](#location)
+    - [Customer](#customer)
+    - [Time](#time)
+  - [8. Prerequisites \& How to Run](#8-prerequisites--how-to-run)
+    - [Prerequisites](#prerequisites)
+    - [How to Run](#how-to-run)
 
 ---
 
@@ -234,27 +240,23 @@ Electric Bicycle vs. Electric Scooter vs. Electric Kickboard vs. Electric Moped 
 Comparing all subcategories across categories — revenue per individual rental.
 3. What is the average rental duration by category and subcategory?
 How long are different categories and subcategories rented on average — reveals usage patterns.
-4. How does rental volume compare across categories and subcategories?
-Number of rentals per category and subcategory — demand comparison.
-5. What are the top 5 most revenue-generating equipment models?
+4. What are the top 5 most revenue-generating equipment models?
 Model-level revenue ranking — the only model-level question.
-6. How has rental volume by category developed over time?
-Monthly trend by category — identifying growth or seasonal variation.
 
 ### Location
 
-- Which rental places (stores vs. stations) generate the most rentals?
-- What is the revenue split between store rentals and station rentals?
-- Which city has the highest rental volume?
+- How do stores and stations compare in terms of rental revenue and rental volume?
+- Which countries and cities generate the highest rental volume?
+- Which rental locations generate the highest revenue and rental volume?
+- Which locations experience the largest imbalance between pickups and returns?
 
 ### Customer
 
-1. **What is the revenue split between individual and corporate customers?**
-2. **Which customers have the highest total rental spend?**
-3. **What is the average rental amount for individual customers compared to corporate customers?**
-4. **What is the average rental duration for individual customers compared to corporate customers?**
-5. **Which equipment categories are rented most frequently by individual customers compared to corporate customers?**
-6. **How has revenue from individual and corporate customers developed over time?**
+1. What is the revenue split between individual and corporate customers?
+2. What is the average rental amount for individual customers compared to corporate customers?
+3. What is the average rental duration for individual customers compared to corporate customers?
+4. Which equipment categories are rented most frequently by individual customers compared to corporate customers?
+5. How has revenue from individual and corporate customers developed over time?
 
 ### Time
 
