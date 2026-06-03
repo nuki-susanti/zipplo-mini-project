@@ -252,9 +252,9 @@ Model-level revenue ranking — the only model-level question.
 ### Customer
 
 1. What is the revenue split between individual and corporate customers?
-2. What is the average rental amount for individual customers compared to corporate customers?
-3. What is the average rental duration for individual customers compared to corporate customers?
-4. Which equipment categories are rented most frequently by individual customers compared to corporate customers?
+2. What is the average rental amount for individual compared to corporate customers?
+3. What is the average rental duration for individual compared to corporate customers?
+4. Which equipment categories are rented most frequently by individual compared to corporate customers?
 5. How has revenue from individual and corporate customers developed over time?
 
 ### Time
