@@ -228,10 +228,9 @@ Reports are built directly from `ZipploDW`. The report pages are designed to ans
 
 ### Revenue & Volume
 
-- What is the total rental revenue by country and city?
-- Which month or quarter generates the most rental revenue?
-- How many rentals are made per day / week / month?
-- What is the average rental amount per transaction?
+1. What is the total rental revenue by country and city?
+2. Which month generates the most rental revenue?
+3. What is the average rental amount per transaction?
 
 Equipment
 1. Which equipment category generates the most total revenue?
@@ -245,10 +244,10 @@ Model-level revenue ranking — the only model-level question.
 
 ### Location
 
-- How do stores and stations compare in terms of rental revenue and rental volume?
-- Which countries and cities generate the highest rental volume?
-- Which rental locations generate the highest revenue and rental volume?
-- Which locations experience the largest imbalance between pickups and returns?
+1. How do stores and stations compare in terms of rental revenue and rental volume?
+2. Which countries and cities generate the highest rental volume?
+3. Which rental locations generate the highest revenue and rental volume?
+4. Which locations experience the largest imbalance between pickups and returns?
 
 ### Customer
 
@@ -260,8 +259,7 @@ Model-level revenue ranking — the only model-level question.
 
 ### Time
 
-- Are there peak hours, days, or seasons for rentals?
-- How does rental volume compare across weekdays vs. weekends?
+1. Are there peak months or seasons for rentals?
 
 ---
 ## 8. Prerequisites & How to Run
