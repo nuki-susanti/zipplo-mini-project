@@ -6,24 +6,30 @@ A data engineering project covering the full pipeline from operational database 
 
 ## Table of Contents
 
-1. [Project Overview](#1-project-overview)
-   - [Project Context](#project-context)
-   - [Business Scenario](#business-scenario)
-2. [Repository Structure](#2-repository-structure)
-3. [Operational Database (ZipploDB)](#3-operational-database-zipplodb)
-4. [Data Warehouse (ZipploDW)](#4-data-warehouse-zipplodw)
-   - [Star Schema](#star-schema)
-   - [Dimension Tables](#dimension-tables)
-   - [Fact Table](#fact-table)
-5. [ETL Process](#5-etl-process)
-6. [Source Data Summary](#6-source-data-summary)
-7. [Power BI Reports & Business Questions](#7-power-bi-reports--business-questions)
-   - [Revenue & Volume](#revenue--volume)
-   - [Equipment](#equipment)
-   - [Location](#location)
-   - [Customer](#customer)
-   - [Time](#time)
-8. [Prerequisites & How to Run](#8-prerequisites--how-to-run)
+- [Zipplo — Rental Operations Database \& Data Warehouse](#zipplo--rental-operations-database--data-warehouse)
+  - [Table of Contents](#table-of-contents)
+  - [1. Project Overview](#1-project-overview)
+    - [Project Context](#project-context)
+    - [Business Scenario](#business-scenario)
+  - [2. Repository Structure](#2-repository-structure)
+  - [3. Operational Database (ZipploDB)](#3-operational-database-zipplodb)
+    - [Key modeling decisions](#key-modeling-decisions)
+  - [4. Data Warehouse (ZipploDW)](#4-data-warehouse-zipplodw)
+    - [Fact table grain](#fact-table-grain)
+    - [Star Schema](#star-schema)
+    - [Dimension Tables](#dimension-tables)
+    - [Fact Table](#fact-table)
+  - [5. ETL Process](#5-etl-process)
+    - [Surrogate key resolution in the fact load](#surrogate-key-resolution-in-the-fact-load)
+  - [6. Source Data Summary](#6-source-data-summary)
+  - [7. Power BI Reports \& Business Questions](#7-power-bi-reports--business-questions)
+    - [Revenue \& Volume](#revenue--volume)
+    - [Location](#location)
+    - [Customer](#customer)
+    - [Time](#time)
+  - [8. Prerequisites \& How to Run](#8-prerequisites--how-to-run)
+    - [Prerequisites](#prerequisites)
+    - [How to Run](#how-to-run)
 
 ---
 
@@ -239,9 +245,10 @@ Model-level revenue ranking — the only model-level question.
 
 ### Location
 
-- Which rental places (stores vs. stations) generate the most rentals?
-- What is the revenue split between store rentals and station rentals?
-- Which city has the highest rental volume?
+- How do stores and stations compare in terms of rental revenue and rental volume?
+- Which countries and cities generate the highest rental volume?
+- Which rental locations generate the highest revenue and rental volume?
+- Which locations experience the largest imbalance between pickups and returns?
 
 ### Customer
 
