@@ -227,20 +227,19 @@ Reports are built directly from `ZipploDW`. The report pages are designed to ans
 - How many rentals are made per day / week / month?
 - What is the average rental amount per transaction?
 
-### Equipment
-
-1. **Which equipment category generates the most total revenue?**
-   Electric Bicycle vs. Electric Scooter vs. Electric Kickboard vs. Electric Moped — comparing total revenue across categories.
-2. **Which subcategory has the highest average revenue per rental?**
-   Comparing all subcategories across categories — revenue per individual rental.
-3. **What is the average rental duration by category and subcategory?**
-   How long are different categories and subcategories rented on average — reveals usage patterns.
-4. **How does rental volume compare across categories and subcategories?**
-   Number of rentals per category and subcategory — demand comparison.
-5. **What are the top 5 most revenue-generating equipment models?**
-   Model-level revenue ranking.
-6. **How has rental volume by category developed over time?**
-   Monthly trend by category — identifying growth or seasonal variation.
+Equipment
+1. Which equipment category generates the most total revenue?
+Electric Bicycle vs. Electric Scooter vs. Electric Kickboard vs. Electric Moped — comparing total revenue across categories.
+2. Which subcategory has the highest average revenue per rental?
+Comparing all subcategories across categories — revenue per individual rental.
+3. What is the average rental duration by category and subcategory?
+How long are different categories and subcategories rented on average — reveals usage patterns.
+4. How does rental volume compare across categories and subcategories?
+Number of rentals per category and subcategory — demand comparison.
+5. What are the top 5 most revenue-generating equipment models?
+Model-level revenue ranking — the only model-level question.
+6. How has rental volume by category developed over time?
+Monthly trend by category — identifying growth or seasonal variation.
 
 ### Location
 
